@@ -15,8 +15,14 @@
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
       "@typings/*": ["src/typings/*"],
-      "@constants/*": ["src/constants/*"]
-    }
+      "@constants/*": ["src/constants/*"],
+      "@utils/*": ["src/utils/*"],
+      "@styles/*": ["src/styles/*"],
+      "@assets/*": ["src/assets/*"],
+      "@context/*": ["src/context/*"],
+      "@api/*": ["src/api/*"]
+    },
+    "typeRoots": ["src/typings"]
   },
   "ts-node": {
     "compilerOptions": {

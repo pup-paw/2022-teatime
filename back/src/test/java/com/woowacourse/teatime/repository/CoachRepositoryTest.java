@@ -1,7 +1,8 @@
-package com.woowacourse.teatime.domain;
+package com.woowacourse.teatime.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.woowacourse.teatime.domain.Coach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class CoachRepositoryTest {
     void findAll_size3() {
         coaches.save(new Coach("제이슨"));
 
-        assertThat(coaches.findAll().size()).isEqualTo(3);
+        assertThat(coaches.findAll().size()).isEqualTo(1);
     }
 
     @Test
@@ -27,6 +28,6 @@ public class CoachRepositoryTest {
         coaches.save(new Coach("제이슨"));
         coaches.save(new Coach("브라운"));
 
-        assertThat(coaches.findAll().size()).isEqualTo(4);
+        assertThat(coaches.findAll().size()).isEqualTo(2);
     }
 }

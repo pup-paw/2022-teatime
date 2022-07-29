@@ -1,36 +1,26 @@
 import styled from 'styled-components';
 
-const CardContainer = styled.div<{ color: string }>`
+const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: end;
   align-items: center;
   width: 250px;
-  height: 300px;
-  margin: 0 10px;
+  height: 320px;
+  padding: 35px 16px;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  background: linear-gradient(to right, ${(props) => props.color});
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   cursor: pointer;
 
   div {
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: end;
     align-items: center;
-    padding: 10px;
     width: 100%;
-    height: 60%;
-    background-color: white;
+    height: 100%;
   }
 
   img {
-    position: absolute;
-    top: -50px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -41,13 +31,21 @@ const CardContainer = styled.div<{ color: string }>`
     font-weight: 600;
   }
 
+  p {
+    text-align: center;
+    font-size: 15px;
+    margin: 10px 0;
+  }
+
   button {
-    width: 80%;
+    width: 67%;
     height: 35px;
-    margin-bottom: 10px;
+    background-color: ${({ theme }) => theme.colors.GREEN_700};
+    color: ${({ theme }) => theme.colors.WHITE};
     border: none;
-    font-size: 20px;
-    border-radius: 4px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bolder;
     cursor: pointer;
   }
 
@@ -56,4 +54,12 @@ const CardContainer = styled.div<{ color: string }>`
   }
 `;
 
-export { CardContainer };
+const ImageWrapper = styled.div`
+  margin-bottom: 10px;
+`;
+
+const ButtonWrapper = styled.div`
+  justify-content: flex-end;
+`;
+
+export { CardContainer, ImageWrapper, ButtonWrapper };
